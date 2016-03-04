@@ -1,4 +1,4 @@
-# Docker image for Pylint source code bug and quality checker for Python
+# Docker image for Pylint checker
 
 [Pylint](https://www.pylint.org/) is a source code bug and quality checker for the Python programming language. It follows the style recommended by PEP 8, the Python style guide. 
 
