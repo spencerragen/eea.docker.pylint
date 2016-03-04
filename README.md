@@ -23,7 +23,7 @@ $ docker run --rm \
          eeacms/pylint /code
 ```
 
-See also `--help` for more options:
+See `--help` for more options:
 
 ```console
 $ docker run eeacms/pylint --help
