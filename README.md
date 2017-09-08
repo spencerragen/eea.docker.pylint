@@ -5,34 +5,31 @@
 ## Supported tags and respective `Dockerfile` links
 
 - [`latest` (*Dockerfile*)](https://github.com/eea/eea.docker.pylint/blob/master/Dockerfile)
-- [`1.5.4` (*Dockerfile*)](https://github.com/eea/eea.docker.pylint/blob/1.5.4/Dockerfile)
+- [`1.7.2` (*Dockerfile*)](https://github.com/eea/eea.docker.pylint/blob/1.7.2/Dockerfile)
 
 ## Usage
 
-```console
-$ docker run --rm -v /path/to/python/code:/code eeacms/pylint
-```
+    $ docker run --rm -v /path/to/python/code:/code eeacms/pylint
+
+or
+
+    $ docker run --rm eeacms/pylint https://github.com/eea/eggmonkeytest.git
 
 ## Advanced usage
 
-Change output format to `html`:
+Change output format to `json`:
 
-```console
-$ docker run --rm -v /path/to/python/code:/code eeacms/pylint --output-format=html /code
-```
+    $ docker run --rm -e PARAMS="--output-format=json" eeacms/pylint https://github.com/eea/eggmonkeytest.git
+
 
 By default this image runs with [this pylint rcfile](https://github.com/eea/eea.docker.pylint/blob/master/pylint.cfg),
 but you can provide your own like:
 
-```console
-$ docker run --rm \
-             -v /path/to/pylint/rcfile.cfg:/etc/pylint.cfg \
-             -v /path/to/code:/code \
-         eeacms/pylint
-```
+
+    $ docker run --rm -v /path/to/pylint/rcfile.cfg:/etc/pylint.cfg \
+             eeacms/pylint https://github.com/eea/eggmonkeytest.git
+
 
 See `--help` for more options:
 
-```console
-$ docker run --rm eeacms/pylint --help
-```
+    $ docker run --rm eeacms/pylint --help
