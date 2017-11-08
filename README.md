@@ -5,6 +5,7 @@
 ## Supported tags and respective `Dockerfile` links
 
 - [`latest` (*Dockerfile*)](https://github.com/eea/eea.docker.pylint/blob/master/Dockerfile)
+- [`1.7.2.1` (*Dockerfile*)](https://github.com/eea/eea.docker.pylint/blob/1.7.2.1/Dockerfile)
 - [`1.7.2` (*Dockerfile*)](https://github.com/eea/eea.docker.pylint/blob/1.7.2/Dockerfile)
 
 ## Usage
