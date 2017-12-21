@@ -1,12 +1,11 @@
 # Docker image for Pylint checker
 
-[Pylint](https://www.pylint.org/) is a source code bug and quality checker for the Python programming language. It follows the style recommended by PEP 8, the Python style guide. 
+[Pylint](https://www.pylint.org/) is a source code bug and quality checker for the Python programming language. It follows the style recommended by PEP 8, the Python style guide.
 
 ## Supported tags and respective `Dockerfile` links
 
 - [`latest` (*Dockerfile*)](https://github.com/eea/eea.docker.pylint/blob/master/Dockerfile)
-- [`1.7.2.1` (*Dockerfile*)](https://github.com/eea/eea.docker.pylint/blob/1.7.2.1/Dockerfile)
-- [`1.7.2` (*Dockerfile*)](https://github.com/eea/eea.docker.pylint/blob/1.7.2/Dockerfile)
+- [`1.7.2.2` (*Dockerfile*)](https://github.com/eea/eea.docker.pylint/blob/1.7.2.2/Dockerfile)
 
 ## Usage
 
