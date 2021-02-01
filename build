@@ -1,0 +1,6 @@
+#!/bin/bash
+
+image_id=$(docker build . | awk 'END {print $NF}')
+echo "Image ID ${image_id} built"
+docker tag ${image_id} sragen/python_pylint:latest
+docker push sragen/python_pylint:latest

@@ -2,7 +2,7 @@
 set -e
 
 if [[ -f /code/requirements.txt ]]; then
-  python -m pip install -r /code/requirements.txt
+  python -m pip install -r /code/requirements.txt --user
 fi
 
 CMD="$1"
