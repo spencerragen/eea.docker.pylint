@@ -1,5 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 set -e
+
+if [[ -f /code/requirements.txt ]]; then
+  python -m pip install -r /code/requirements.txt
+fi
 
 CMD="$1"
 
@@ -35,7 +39,7 @@ if [[ ${CMD:0:1} = "-" ]]; then
 fi
 
 if [ "$CMD" = "pylint" ]; then
-  find -L /code $CUSTOM_FIND -name [eE]xtensions -prune -o -name skins -prune -o -name interfaces.py -prune -o -name "*.py" -print | xargs pylint $PARAMS --rcfile /etc/pylint.cfg
+  find -L /code $CUSTOM_FIND -name [eE]xtensions -prune -o -name skins -prune -o -name package -prune -o -name interfaces.py -prune -o -name "*.py" -print | xargs pylint $PARAMS --rcfile /etc/pylint.cfg
   # Check interfaces.py
   PYIFACES=$(find -L /code -name "interfaces.py" -print)
   if [ "$PYIFACES" != "" ]; then
